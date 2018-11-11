@@ -1,5 +1,5 @@
 # PowerLess
-A set of useful utility scripts that can be used to help penetration testers and windows powerusers.
+A set of useful utility scripts & guides that can be used to help penetration testers and windows powerusers.
 
 ## Installation
 To get started, clone this repo:
@@ -18,6 +18,12 @@ In order to update **PowerLess**, all you need to do is pull the newest version 
 git pull https://github.com/d0minikt/PowerLess
 ```
 
+## Guide
+
+### Coming soon
+ - [ ] Introduction to powershell
+ - [ ] Environmental variables and profiles in powershell
+
 ## Modules
 
 ### `Extract`
@@ -28,3 +34,8 @@ The `Extract.ps1` script extracts the data about a particular device. It outputs
 
 ### `KeyLogger`
 This keylogger is very simple yet not detected by Windows 10 real time protection, nor any anti viruses (at least at the time of writing this). It allows you to specify the output path, and if not specified, it saves the output in the window temporary file directory. You can quickly open it from powershell with `explorer $Env:Temp`. The script will run in the background as soon as executed.
+
+### Coming soon
+ - [ ] RunAs admin permission elevation
+ - [ ] Add accounts to windows
+
