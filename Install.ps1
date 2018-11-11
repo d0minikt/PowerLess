@@ -4,7 +4,7 @@ $PSModulePath = ($Env:PSModulePath -split ";")[0]
 
 # Add to modules and import whenever a new powershell session is started
 Write-Host "Moving the PowerLess folder to $PSModulePath"
-Move-Item $ThisModule $PSModulePath -ErrorAction SilentlyContinue
+Move-Item $ThisModule $PSModulePath -Force
 Add-Content -Path $Profile -Value "Import-Module PowerLess;"
 
 # Import module so the user doesn't have to restart the session
