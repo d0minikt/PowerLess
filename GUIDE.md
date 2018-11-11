@@ -2,6 +2,28 @@
 
 A poweruser's guide to powershell.
 
+## Profiles
+
+- [Documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6)
+
+|Name |	Description|
+|---|---|
+|$Profile |	Current User, Current Host|
+|$Profile.CurrentUserCurrentHost |	Current User, Current Host|
+|$Profile.CurrentUserAllHosts |	Current User, All Hosts|
+|$Profile.AllUsersCurrentHost |	All Users, Current Host|
+|$Profile.AllUsersAllHosts |	All Users, All Hosts|
+
+
+Edit a profile:
+```powershell
+notepad $Profile.CurrentUserAllHosts
+```
+Reload a profile:
+```powershell
+. $Profile.CurrentUserAllHosts
+```
+
 ## Environmental Variables
 
 - [Documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-6)
@@ -28,11 +50,13 @@ Set-Location Env:
 ```
 
 To save changes made to environmental variables, you need to apply the changes in your powershell profile:
+
 ```powershell
 Add-Content -Path $Profile.CurrentUserAllHosts -Value '$Env:Path = $Env:Path + ";C:\Temp"'
 ```
 
 If you'd like to see the changes, you need to restart your shell, or run:
+
 ```powershell
 . $Profile.CurrentUserAllHosts
 ```
