@@ -9,5 +9,3 @@ function Get-WiFiPasswords() {
   }
   return $WifiInfo
 }
-
-Export-ModuleMember -Function Get-WiFiPasswords
