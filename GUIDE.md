@@ -6,22 +6,30 @@ A poweruser's guide to powershell.
 
 - [Documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6)
 
-|Name |	Description|
-|---|---|
-|$Profile |	Current User, Current Host|
-|$Profile.CurrentUserCurrentHost |	Current User, Current Host|
-|$Profile.CurrentUserAllHosts |	Current User, All Hosts|
-|$Profile.AllUsersCurrentHost |	All Users, Current Host|
-|$Profile.AllUsersAllHosts |	All Users, All Hosts|
-
+| Name                              | Description                |
+| --------------------------------- | -------------------------- |
+| `$Profile`                        | Current User, Current Host |
+| `$Profile.CurrentUserCurrentHost` | Current User, Current Host |
+| `$Profile.CurrentUserAllHosts`    | Current User, All Hosts    |
+| `$Profile.AllUsersCurrentHost`    | All Users, Current Host    |
+| `$Profile.AllUsersAllHosts`       | All Users, All Hosts       |
 
 Edit a profile:
+
 ```powershell
 notepad $Profile.CurrentUserAllHosts
 ```
+
 Reload a profile:
+
 ```powershell
 . $Profile.CurrentUserAllHosts
+```
+
+To run without a profile:
+
+```powershell
+powershell -NoProfile
 ```
 
 ## Environmental Variables
@@ -60,6 +68,26 @@ If you'd like to see the changes, you need to restart your shell, or run:
 ```powershell
 . $Profile.CurrentUserAllHosts
 ```
+
+## Automatic Variables
+
+- [Documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_automatic_variables?view=powershell-6)
+  | Name | Description |
+  | ------- | ------------------------------------------------------------------------ |
+  | `$$` | Last token in the last line received by the session |
+  | `$?` | The execution status of the last operation. [boolean]\$Succeded |
+  | `$^` | First token in the last line received by the session |
+  | `$_` | Same as `$PSItem`. Current object in the pipeline object |
+  | `$Args` | Path of the console file (.psc1) that was most recently used |
+  | `$ForEach` | Enumerator (not the resulting values) of a ForEach loop |
+  | `$Home` | Full path of the user's home directory |
+  | `$Host` | Full path of the user's home directory |
+  | `PID` | Process identifier (PID) of the process that is hosting the current PowerShell session |
+  | `Profile` | Full path of the PowerShell profile for the current user and the current host application|
+  | `PSCommandPath` | Full path and file name of the script that is being run |
+  | `PSHome` | Full path of the installation directory for PowerShell, typically, `%windir%\System32\PowerShell\v1.0` in Windows systems |
+  | `PSScriptRoot` | The directory from which a script is being run |
+  | `MyInvocation` | Information about the current command, such as the name, parameters, parameter values, and information about how the command was started, called, or "invoked," such as the name of the script that called the current command. |
 
 ## Local Windows Accounts
 
