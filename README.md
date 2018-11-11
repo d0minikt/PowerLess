@@ -36,7 +36,35 @@ The `Extract.ps1` script extracts the data about a particular device. It outputs
 This keylogger is very simple yet not detected by Windows 10 real time protection, nor any anti viruses (at least at the time of writing this). It allows you to specify the output path, and if not specified, it saves the output in the window temporary file directory. You can quickly open it from powershell with `explorer $Env:Temp`. The script will run in the background as soon as executed.
 
 ### `Invoke-AsAdmin`
+Used to elevate the script file, a script, or the powershell terminal to admin permissions. Also has an alias to `sudo`.
+#### Usage
+File:
+```powershell
+Invoke-AsAdmin -File ".\Some-Script-That-Requires-Admin-Permisisons.ps1"
+```
+Inside of a file itself:
+```powershell
+#Requires -Modules PowerLess
 
+if (!(Test-Admin)) {
+  Invoke-AsAdmin -File $PSCommandPath
+}
+else {
+  # Do stuff here
+}
+```
+A script snippet:
+```powershell
+Invoke-AsAdmin "Test-Admin;Read-Host"
+#or
+sudo "Test-Admin;Read-Host"
+```
+An elevated terminal shell:
+```powershell
+Invoke-AsAdmin
+#or
+sudo
+```
 
 ### Coming soon
  - [ ] RunAs admin permission elevation
