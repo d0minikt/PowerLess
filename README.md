@@ -38,4 +38,5 @@ This keylogger is very simple yet not detected by Windows 10 real time protectio
 ### Coming soon
  - [ ] RunAs admin permission elevation
  - [ ] Add accounts to windows
+ - [ ] Gain local offline backdoor to a shell through "ease of access" - including a guide on how to do that with just a windows 10 usb stick installer
 
