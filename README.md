@@ -25,3 +25,6 @@ The `Extract.ps1` script extracts the data about a particular device. It outputs
  - [x] Extract wifi passwords
  - [x] Extract device information
  - [x] Extract Chrome bookmarks & history
+
+### `KeyLogger`
+This keylogger is very simple yet not detected by Windows 10 real time protection, nor any anti viruses (at least at the time of writing this). It allows you to specify the output path, and if not specified, it saves the output in the window temporary file directory. You can quickly open it from powershell with `explorer $Env:Temp`. The script will run in the background as soon as executed.
