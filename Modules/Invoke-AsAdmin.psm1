@@ -27,5 +27,3 @@ function Invoke-AsAdmin() {
 }
 
 Set-Alias sudo Invoke-AsAdmin
-
-Export-ModuleMember -Function * -Alias *

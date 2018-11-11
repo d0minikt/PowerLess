@@ -17,5 +17,3 @@ function Get-DeviceInfo() {
     Memory          = $Memory
   }
 }
-
-Export-ModuleMember -Function Get-DeviceInfo

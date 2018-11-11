@@ -49,5 +49,3 @@ function Extract() {
 
   prog "Done"
 }
-
-Export-ModuleMember -Function Extract

