@@ -23,7 +23,6 @@ You can access the powershell guide [here](GUIDE.md).
 
 ### Coming soon
  - [ ] Introduction to powershell
- - [ ] Environmental variables and profiles in powershell
 
 ## Modules
 
