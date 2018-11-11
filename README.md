@@ -18,7 +18,8 @@ from GitHub using `git pull` if you're in the project's directory, or `git clone
 it again, it will replace the old one with the new one for you.
 
 
-## Guide
+## [Guide](GUIDE.md)
+You can access the powershell guide [here](GUIDE.md).
 
 ### Coming soon
  - [ ] Introduction to powershell
