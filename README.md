@@ -13,10 +13,10 @@ To install the modules globally, simply run the `Install` script:
 All done! Now you can use the modules whenever you open a new powershell terminal.
 
 ## Updating
-In order to update **PowerLess**, all you need to do is pull the newest version of it from GitHub:
-```powershell
-git pull https://github.com/d0minikt/PowerLess
-```
+In order to update **PowerLess**, all you need to do is pull the newest version of it 
+from GitHub using `git pull` if you're in the project's directory, or `git clone` and `.\Install.ps1`
+it again, it will replace the old one with the new one for you.
+
 
 ## Guide
 
@@ -34,6 +34,9 @@ The `Extract.ps1` script extracts the data about a particular device. It outputs
 
 ### `KeyLogger`
 This keylogger is very simple yet not detected by Windows 10 real time protection, nor any anti viruses (at least at the time of writing this). It allows you to specify the output path, and if not specified, it saves the output in the window temporary file directory. You can quickly open it from powershell with `explorer $Env:Temp`. The script will run in the background as soon as executed.
+
+### `Invoke-AsAdmin`
+
 
 ### Coming soon
  - [ ] RunAs admin permission elevation
